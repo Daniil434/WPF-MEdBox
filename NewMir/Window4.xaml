@@ -1,0 +1,80 @@
+﻿<Window x:Class="NewMir.Window4"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NewMir"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Window1" Height="1150" Width="1400">
+    <Grid Background="#ffdada">
+        <Border  Width="1200" Height="970"  Margin="20,35,20,35" Background="White" VerticalAlignment="Center"  Padding="30" CornerRadius="23" >
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="15" Color="Black" ShadowDepth="0"></DropShadowEffect>
+            </Border.Effect>
+            <StackPanel Margin="0,0,0,-3">
+                <Grid>
+                    <TextBlock x:Name="Name_User" Text="" FontSize="50" FontWeight="Bold" FontFamily="Bookman Old Style" TextAlignment="Left" Margin="0 0 150 20" />
+                    <Image Width="120" Height="120" Name="Image_Create_Menu"  HorizontalAlignment="Right" Source="99NWFUTqsKY.jpg">
+
+                    </Image>
+                </Grid>
+                
+                <Grid Margin="0 20 0 0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="36*"/>
+                        <RowDefinition Height="19*"/>
+                    </Grid.RowDefinitions>
+                    <Button HorizontalAlignment="Left" Margin="10,0,0,0" Content="Заказать" Style="{StaticResource MaterialDesignFlatButton}" FontSize="20" Height="Auto" Width="140" Grid.RowSpan="2" Click="Button_Click" ></Button>
+
+
+                    <Button HorizontalAlignment="Left" Margin="165,0,0,0.643" Content="Обновить" Style="{StaticResource MaterialDesignFlatButton}" FontSize="20" Grid.RowSpan="2" Height="Auto" Width="140" Click="Button_Click_1" ></Button>
+                    <Button HorizontalAlignment="Left" Margin="320,0,0,0.643" Content="История" Style="{StaticResource MaterialDesignFlatButton}" FontSize="20" Grid.RowSpan="2" Height="Auto" Width="140" Click="Button_Click_2" ></Button>
+                    <Button HorizontalAlignment="Left" Margin="475,0,0,0.643" Content="Талоны" Style="{StaticResource MaterialDesignFlatButton}" FontSize="20" Grid.RowSpan="2" Height="Auto" Width="140" Click="Button_Click_4"   ></Button>
+                    <Button HorizontalAlignment="Left" Margin="620,0,0,0.643" Content="Заказаные талоны" Style="{StaticResource MaterialDesignFlatButton}" FontSize="20" Grid.RowSpan="2" Height="Auto" Width="210" Click="Button_Click_5"></Button>
+                    <Button HorizontalAlignment="Center" Margin="630,0,0,0.643"  Content="email" Style="{StaticResource MaterialDesignFlatButton}" FontSize="20" Grid.RowSpan="2" Height="Auto" Width="100"   ></Button>
+                    <Button HorizontalAlignment="Center" Margin="835,0,0,0.643" Content="word" Style="{StaticResource MaterialDesignFlatButton}" FontSize="20" Grid.RowSpan="2" Height="Auto" Width="100"   ></Button>
+                    <Button HorizontalAlignment="Right" Margin="0,3,0,-0.357" Content="profile" Grid.RowSpan="2" FontSize="20" Height="Auto" Width="90" Click="Button_Click_7" ></Button>
+                </Grid>
+                
+                <ListView x:Name="List_of_Talons" Margin="10">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <WrapPanel>
+                                <TextBlock x:Name="write_password" Text="{Binding time}" FontSize="20" />
+                                <TextBlock Text=", "/>
+                                <TextBlock x:Name="write_email" Text="{Binding vrach}" FontSize="20" />
+                                <TextBlock Text=", "/>
+                                <TextBlock  Text="{Binding login}" FontWeight="Bold" FontSize="20"/>
+                                <TextBlock Text=", "/>
+                                <TextBlock  Text="{Binding password}" FontSize="20" />
+                                <TextBlock Text=", "/>
+                                <TextBlock  Text="{Binding email}" FontSize="20" />
+                                <TextBlock Text=", "/>
+                                <TextBlock x:Name="write_fio" Text="{Binding fio}" FontSize="20"/>
+                                <TextBlock Text=", "/>
+                                <TextBlock x:Name="write_name" Text="{Binding name}" FontSize="20"/>
+                                <TextBlock Text=", "/>
+                                <TextBlock x:Name="write_otchestvo" Text="{Binding otchestvo}" FontSize="20"/>
+                                <TextBlock Text=", "/>
+                                <TextBlock x:Name="write_data" Text="{Binding data}" FontSize="20"/>
+                                <TextBlock Text=", "/>
+                                <TextBlock x:Name="write_name_hospital" Text="{Binding name_hospital}" FontSize="20"/>
+                                <TextBlock Text=", "/>
+                                <TextBlock x:Name="write_number_kabinet" Text="{Binding number_kabinet}" FontSize="20"/>
+                                <Button  Margin="0,0,0,0" Content="Удалить" Style="{StaticResource MaterialDesignFlatButton}" Grid.RowSpan="2" Height="Auto" Width="132" Click="Button_Click_3" ></Button>
+                            </WrapPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <Grid Margin="0,300,0,0">
+                    <Button HorizontalAlignment="Center" Margin="0,0,0,0" Content="Выход"  FontSize="30" Grid.RowSpan="2"  Width="320" Height="50" Click="Button_Click_6"></Button>
+                    <Button HorizontalAlignment="Right" Content="About" Style="{StaticResource MaterialDesignFlatButton}"  Width="216" FontSize="20" Height="Auto" />
+                    <Button HorizontalAlignment="Left" Content="Help" Style="{StaticResource MaterialDesignFlatButton}"  Width="216" FontSize="20" Height="Auto" />
+                </Grid>
+                
+            </StackPanel>
+        </Border>
+
+    </Grid>
+</Window>

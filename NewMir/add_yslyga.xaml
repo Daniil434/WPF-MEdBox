@@ -1,0 +1,37 @@
+﻿<Page x:Class="NewMir.add_yslyga"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:NewMir"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+       mc:Ignorable="d" 
+      d:DesignHeight="470" d:DesignWidth="1000"
+      Title="Add_hospital">
+    <Border  Width="1000" Height="470"   Background="White" VerticalAlignment="Center"  Padding="30" CornerRadius="23" >
+        <Border.Effect>
+            <DropShadowEffect BlurRadius="15" Color="Black" ShadowDepth="0"></DropShadowEffect>
+        </Border.Effect>
+        <StackPanel Margin="0,0,0,-3">
+            <TextBlock Text="Mir" FontSize="60" FontWeight="Bold" FontFamily="Bookman Old Style" TextAlignment="Center" Margin="0 0 0 20" />
+            
+            <Grid>
+                <TextBox x:Name="textBox_Add_Name"  Margin="20 0 0 20" materialDesign:HintAssist.Hint="Введите название" Style="{StaticResource MaterialDesignFloatingHintTextBox}"  FontSize="30"/>
+
+            </Grid>
+
+            <Grid>
+
+                <TextBox x:Name="textBox_Add_Cost"  Margin="20,0,0,20" materialDesign:HintAssist.Hint="Стоимость" Style="{StaticResource MaterialDesignFloatingHintTextBox}"  FontSize="30"/>
+            </Grid>
+
+            
+
+            <Grid Margin="10 0 10 0">
+
+                <Button x:Name="Button_Zareg" Height="55" Content="Добавить"  FontSize="30" Click="Button_Zareg_Click"  />
+            </Grid>
+
+        </StackPanel>
+    </Border>
+</Page>

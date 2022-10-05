@@ -1,0 +1,44 @@
+﻿<Page x:Class="NewMir.Add_hospital"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:NewMir"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+       mc:Ignorable="d" 
+      d:DesignHeight="970" d:DesignWidth="1000"
+      Title="Add_hospital">
+    <Border  Width="1000" Height="970"   Background="White" VerticalAlignment="Center"  Padding="30" CornerRadius="23" >
+        <Border.Effect>
+            <DropShadowEffect BlurRadius="15" Color="Black" ShadowDepth="0"></DropShadowEffect>
+        </Border.Effect>
+        <StackPanel Margin="0,0,0,-3">
+            <TextBlock Text="Mir" FontSize="60" FontWeight="Bold" FontFamily="Bookman Old Style" TextAlignment="Center" Margin="0 0 0 20" />
+            <Grid>
+                <Image Width="250" Height="250" Name="Image_Create_Menu_Hospital" MouseLeftButtonDown="Click_Image" Margin="250 20 250 20"  Source="99NWFUTqsKY.jpg">
+
+                </Image>
+            </Grid>
+            <Grid>
+                <TextBox x:Name="textBox_Add_Name"  Margin="20 0 0 20" materialDesign:HintAssist.Hint="Введите название" Style="{StaticResource MaterialDesignFloatingHintTextBox}"  FontSize="30"/>
+                
+            </Grid>
+
+            <Grid>
+                
+                <TextBox x:Name="textBox_Add_Adres"  Margin="20,0,0,20" materialDesign:HintAssist.Hint="Адрес" Style="{StaticResource MaterialDesignFloatingHintTextBox}"  FontSize="34"/>
+            </Grid>
+
+            <Grid>
+
+                <TextBox x:Name="textBox_Add_all_vrach" Height="210"  Margin="20,0,0,20" materialDesign:HintAssist.Hint="Перечислите всех врачей" Style="{StaticResource MaterialDesignTextBox}"  FontSize="30" />
+            </Grid>
+            
+            <Grid Margin="10 0 10 0">
+                
+                <Button x:Name="Button_Zareg" Height="55" Content="Добавить"  FontSize="30" Click="Button_Add_hospital" />
+            </Grid>
+
+        </StackPanel>
+    </Border>
+</Page>
